@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event One</h1>
+    <button id="start"> Start</button>
+    <button id="stop"> Stop</button>
+
+</body>
+<script>
+   const saySubeer  = function() {
+    console.log("Subeer");
+   }
+
+   let intervalId;
+
+   document.getElementById("start").onclick = function() {
+       if (!intervalId) {
+           intervalId = setInterval(saySubeer, 1000);
+       }
+   }
+
+   document.getElementById("stop").onclick = function() {
+       clearInterval(intervalId);
+       intervalId = null;
+   }
+</script>
+</html>
