@@ -1,3 +1,1 @@
-old methods
-s
-www
+New
